@@ -1,0 +1,13 @@
+version: '2'
+services:
+  core:
+    build:
+      context: ./
+      dockerfile: Dockerfile-dev
+    image: turtl-core-dev
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/root/turtl-core-dev
+    command: bash
+    tty: true
